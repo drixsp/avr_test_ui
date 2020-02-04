@@ -1,0 +1,48 @@
+/* ----------- Specific to presets page -----------*/
+.preset {
+  background: white;
+  border: 2px solid #c4c4c4;
+  height: 55px;
+  width: 451px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Arial", "sans-serif";
+  color: #bababa;
+  /* margin-top: 10px; */
+  /* margin-top: 74px; */
+}
+.preset h1 {
+  color: #bababa;
+  font-weight: bold;
+  /* margin-left: 28px; */
+  font-size: 20px;
+  /* margin-top: 19px; */
+}
+.presetcontainer {
+  /* background-color: green; */
+  margin-top: 100px;
+  max-height: 510px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 220px;
+  padding-right: 220px;
+  /* height: 200px; */
+}
+#pr_edit {
+  background-color: gray;
+  color: white;
+  float: right;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-weight: bold;
+}
+.button {
+  margin-left: 5px;
+
+  background-color: #bababa !important;
+}
+.options {
+  float: right;
+}

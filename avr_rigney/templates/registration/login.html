@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <title>Login Page</title>
+  <head>
+      <link rel="stylesheet" type="text/css" href="{% static 'avr_rigney/login.css' %}">
+  </head>
+  <body>
+  {% block content %}
+  <div class="login_entire">
+  <div class="login">
+    <form method="post" id="form_login">
+      {% csrf_token %}
+      <p><label for="id_username"></label> <input class="user"type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="10" required id="id_username"  placeholder="username"></p>
+      <p><label for="id_password"></label> <input type="password" name="password" autocomplete="current-password" required id="id_password" placeholder="password"></p>
+  </div>
+  <div class="button">
+      <button type="submit" class="submitbutton">LOG IN</button>
+  </div>
+    </form>
+  {% endblock %}
+  </div>
+  </body> 
+</html>

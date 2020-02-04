@@ -1,0 +1,53 @@
+{% extends "avr_rigney/base.html" %} {% load static %} {% block css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'avr_rigney/dashboard.css' %}"
+/>
+{% endblock %} {% block content %}
+<div
+  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+>
+  <h1 class="header">Dashboard</h1>
+  <div class="btn-toolbar mb-2 mb-md-0"></div>
+</div>
+<div class="row">
+  {% for lights in light_modules %}
+
+  <div class="col-3">
+    <div class="module">
+      <div class="container">
+        <!-- Header -->
+        <div class="row module-header">
+          <div class="col-sm">
+            <h1>{{ lights.module_name | upper }}</h1>
+          </div>
+        </div>
+      </div>
+      <div class="rowcontainer">
+        <div class="row switch">
+          {% for switch in lights.number_of_relays_used_range %}
+          <div class="col-sm">
+            <img
+              class="switch-img"
+              src="{% static 'avr_rigney/img/light-off.svg' %}"
+            />
+            <p class="switchtext">{{ forloop.counter }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="separator"></div> -->
+<!--Use separator to give spacing between modules-->
+{% endfor %} {% block javascript %}
+<script>
+  $(".switch-img").click(function() {
+    console.log("clicked");
+
+    // insert ajax call to check model
+  });
+</script>
+{% endblock %} {% endblock %}

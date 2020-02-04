@@ -1,0 +1,28 @@
+<nav class="bg-light sidebar">
+  <div class="sidebar-sticky">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a {% if 'dashboard' in request.get_full_path %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="/dashboard">
+          Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a {% if 'presets' in request.get_full_path %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="/presets">
+          Presets
+        </a>
+      </li>
+      {% ifequal request.user.username "admin" %}   
+        <li class="nav-item">
+          <a {% if 'settings' in request.get_full_path %} class="nav-link active" {% else %} class="nav-link" {% endif %} href="/settings">
+            Settings
+          </a>
+        </li>
+      {% endifequal %}
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">
+          Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,70 @@
+{% extends "avr_rigney/base.html" %}
+
+{% block content %}
+<div>
+  <p>This is the settings page.</p>
+  <div>
+    <p> Add a Light Module </p>
+    
+    
+    <select id="module-type">
+      <option value="light_module" selected>Light Module</option>
+      <option value="outlet_module">Outlet Module</option>
+      <option value="ac_module">AC Module</option>
+      <option value="temp_module">Temperature Module</option>
+      <input type="submit" value="Add Module" style="visibility:hidden;">
+    </select>
+   
+
+    <div id="light-module-form">
+      <form class="module-forms" action="{% url 'avr_rigney:settingsPage' %}" method="POST" >
+        {% csrf_token %}
+        <table>
+            {{ light_form }}
+        </table>
+        <input type="hidden" class="type-selection" value="light-module">
+        <br><input type="submit" value="Add Module">
+      </form>
+    </div>
+
+    <div id="ac-module-form" class="form-divs">
+      <form class="module-forms" action="{% url 'avr_rigney:settingsPage' %}" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ ac_form }}
+        </table>
+        <input type="hidden" class="type-selection">
+        <br><input type="submit" value="Add Module">
+      </form>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script>
+
+  $('.form-divs').css({
+    'display': 'none'
+  });
+
+  $("#module-type").change(function () {
+    var module_type = $(this).val();
+    console.log(module_type);
+    
+    if(module_type=="light_module") {
+      $('#light-module-form').show();
+      $('#ac-module-form').hide();
+      document.getElementsByClassName('type-selection').value = 'light_module'; 
+      console.log("HERE");
+    }
+    else {
+      $('#light-module-form').hide();
+      $('#ac-module-form').show();
+      document.getElementsByClassName('type-selection').value = 'ac_module'; 
+    }
+  });
+
+</script>
+{% endblock %}

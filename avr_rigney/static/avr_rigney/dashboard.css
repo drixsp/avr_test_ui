@@ -1,0 +1,41 @@
+/* ----------- Specific to dashboard page -----------*/
+.module {
+  background: white;
+  border: 2px solid #c4c4c4;
+  height: 345px;
+  width: 451px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Arial", "sans-serif";
+  color: #bababa;
+}
+.module h1 {
+  color: #bababa;
+  font-weight: bold;
+  font-size: 24px;
+}
+.switch {
+  background-color: white;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-bottom: 0px;
+}
+.switchtext {
+  padding-top: 10px;
+  text-align: center;
+  padding-bottom: 0px;
+  font-weight: bold;
+}
+.module-header {
+  margin: 0;
+  display: inline-block;
+}
+.col-sm {
+  text-align: center !important;
+}
+/* .rowcontainer {
+  display: flex;
+  align-items: center;
+} */

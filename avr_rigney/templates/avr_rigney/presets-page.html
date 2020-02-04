@@ -1,0 +1,43 @@
+{% extends "avr_rigney/base.html" %}
+{% load static %}
+
+{% block css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'avr_rigney/preset.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+<div>
+  <!-- <p>This is the presets page.</p> -->
+  <div
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+  >
+    <h1 class="header">Presets</h1>
+    <div class="btn-toolbar mb-2 mb-md-0"></div>
+  </div>
+
+  <!-- separator -->
+  <div class="preset">
+    <div class="container">
+      <div class="row" id="header">
+        <div class="col-sm">
+          <h1>FRONT LIGHTS</h1>
+        </div>
+      </div>
+      <div class="options">
+        <a href="">
+          <!--insert link-->
+          <div class="button" id="pr_edit">LOAD</div>
+        </a>
+
+        <div class="button" id="pr_edit">EDIT</div>
+      </div>
+    </div>
+  </div>
+  <!-- separator -->
+  <div class="separator"></div>
+</div>
+{% endblock %}
