@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Dashboard</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link href="dashboard.css" rel="stylesheet" />
+
+    <!-- <link href="module.css" rel="stylesheet" /> -->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- <nav class="col-md-2 d-none d-md-block bg-light sidebar"> -->
+        <nav class="bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Presets
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Settings
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-10 ml-sm-auto col-lg-11">
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="header">Dashboard</h1>
+            <div class="btn-toolbar mb-2 mb-md-0"></div>
+          </div>
+          <!--================== Module ==================-->
+          <div class="module">
+            <div class="container">
+              <!-- Row 1 -->
+              <div class="row" id="header">
+                <div class="col-sm">
+                  <h1>FRONT LIGHTS</h1>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row" id="switch">
+              <div class="col-sm">
+                <img
+                  src="light-on.svg"
+                  alt="AC unit"
+                  id="switch"
+                  onclick="change()"
+                />
+                <p id="switchtext">01</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-on.svg" alt="AC unit" />
+                <p id="switchtext">02</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-on.svg" alt="AC unit" />
+                <p id="switchtext">03</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-on.svg" alt="AC unit" />
+                <p id="switchtext">04</p>
+              </div>
+            </div>
+
+            <div class="row" id="switch">
+              <div class="col-sm">
+                <img src="light-off.svg" alt="AC unit" />
+                <p id="switchtext">05</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-off.svg" alt="AC unit" />
+                <p id="switchtext">06</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-off.svg" alt="AC unit" />
+                <p id="switchtext">07</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-off.svg" alt="AC unit" />
+                <p id="switchtext">08</p>
+              </div>
+            </div>
+          </div>
+          <!--================== Module ==================-->
+
+          <!--================== Module ==================-->
+          <div class="module">
+            <div class="container">
+              <!-- Row 1 -->
+              <div class="row" id="header">
+                <div class="col-sm">
+                  <h1>FRONT LIGHTS</h1>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row" id="switch">
+              <div class="col-sm">
+                <img
+                  src="light-on.svg"
+                  alt="AC unit"
+                  id="switch"
+                  onclick="change()"
+                />
+                <p id="switchtext">01</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-on.svg" alt="AC unit" />
+                <p id="switchtext">02</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-on.svg" alt="AC unit" />
+                <p id="switchtext">03</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-on.svg" alt="AC unit" />
+                <p id="switchtext">04</p>
+              </div>
+            </div>
+
+            <div class="row" id="switch">
+              <div class="col-sm">
+                <img src="light-off.svg" alt="AC unit" />
+                <p id="switchtext">05</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-off.svg" alt="AC unit" />
+                <p id="switchtext">06</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-off.svg" alt="AC unit" />
+                <p id="switchtext">07</p>
+              </div>
+              <div class="col-sm">
+                <img src="light-off.svg" alt="AC unit" />
+                <p id="switchtext">08</p>
+              </div>
+            </div>
+          </div>
+
+          <!--================== Module ==================-->
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
